@@ -1,6 +1,5 @@
 import java.awt.*;
 import java.util.*;
-import java.awt.Graphics;
 
 /**
  * Write a description of class Molecule here.
@@ -10,43 +9,60 @@ import java.awt.Graphics;
  */
 
 public class Molecule{
-    private Rectangle back;
+    private Rectangle Back;
+    private Rectangle Up;
+    private Rectangle Left;
+    private Rectangle Down;
+    private Rectangle Rigth;
     private String cadena;
     private boolean isVisible;
-    private String[] arreglo;
+    private char[] arreglo;
+    private int longitud;
     
     /**
      * Constructor for objects of class Molecule
      */
     public Molecule(String datos){
-        back = new Rectangle();
-        back.changeSize(50,50);
-        back.changeColor("yellow");
+        Up = new Rectangle();
+        Rigth = new Rectangle();
+        Left = new Rectangle();
+        Down = new Rectangle();
+        
+        Back = new Rectangle();
+        Back.changeSize(50,50);
+        Back.changeColor("green");
+        
         isVisible = false;
         cadena = datos;
-        //arreglo = cadena.toCharArray();
-        //System.out.println(Arrays.toString(arreglo));
-        //System.out.println(arreglo[0]);
-        arreglo = cadena.split(" ");
+        arreglo = cadena.toCharArray();
+        longitud = arreglo.length;
+        for (int i = 0; i < longitud; i++){
+            //System.out.println(i);
+            if (arreglo[i] == 'A'){
+                Up.changeColor("yellow");
+            }else if(arreglo[i] == 'B'){
+                Up.changeColor("blue");
+            }else if(arreglo[i] == 'C'){
+                Up.changeColor("orange");
+            }else if(arreglo[i] == 'D'){
+                Up.changeColor("black");
+            }else if (arreglo[i] == '0'){
+                Up.changeColor("red");
+            }else{
+                Exception e;
+            }
+        }
     }
     public void makeVisible(){
-        back.makeVisible();
+        Back.makeVisible();
+        Up.makeVisible();
+        Down.makeVisible();
+        Rigth.makeVisible();
+        Left.makeVisible();
         isVisible = true;
-        draw();
     }
     public void makeInvisible(){
-        back.makeInvisible();
+        Back.makeInvisible();
         isVisible = false;
-    }
-    /*
-     * Draw the rectangle with current specifications on screen.
-     */
-
-    private void draw() {
-        if(isVisible) {
-            Canvas canvas = Canvas.getCanvas();
-            canvas.drawString(cadena, (float)15.0, (float)10.0);
-            canvas.wait(10);
-        }
     }
 }
