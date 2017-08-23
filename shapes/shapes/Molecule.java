@@ -15,16 +15,23 @@ public class Molecule{
     /**
      * Constructor for objects of class Molecule
      */
-    public Molecule(String cadena){
+    public Molecule(String datos){
         back = new Rectangle();
         back.changeSize(50,50);
         back.changeColor("yellow");
         isVisible = false;
+        cadena = datos;
+        System.out.println(cadena.charAt(6));
+        //cadena.toCharArray();
+        //cadena.split(cadena);
     }
     public void makeVisible(){
         back.makeVisible();
+        isVisible = true;
     }
     public void makeInvisible(){
         back.makeInvisible();
+        isVisible = false;
     }
+
 }

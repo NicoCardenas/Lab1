@@ -1,5 +1,5 @@
 #BlueJ class context
-comment0.params=cadena
+comment0.params=datos
 comment0.target=Molecule(java.lang.String)
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Molecule\r\n
 comment1.params=
