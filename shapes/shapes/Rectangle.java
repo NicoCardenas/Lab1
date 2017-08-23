@@ -229,7 +229,7 @@ public class Rectangle{
         makeVisible();
     }
     /**
-     * 
+     *Calculate the perimeter
      */
     public void perimetro(){
         perimeter = (2*height)+(2*width);
