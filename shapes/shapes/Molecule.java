@@ -29,28 +29,50 @@ public class Molecule{
         Down = new Rectangle();
         
         Back = new Rectangle();
-        Back.changeSize(50,50);
-        Back.changeColor("green");
+        Back.changeSize(90,90);
+        Back.changeColor("black");
+        
+        Up.changeSize(30, 30);
+        Rigth.changeSize(30, 30);
+        Down.changeSize(30, 30);
+        Left.changeSize(30, 30);
+        
+        Up.moveHorizontal(30);
+        Rigth.moveHorizontal(60);
+        Rigth.moveVertical(30);
+        Left.moveVertical(30);
+        Down.moveHorizontal(30);
+        Down.moveVertical(60);
         
         isVisible = false;
         cadena = datos;
         arreglo = cadena.toCharArray();
         longitud = arreglo.length;
         for (int i = 0; i < longitud; i++){
-            //System.out.println(i);
-            if (arreglo[i] == 'A'){
-                Up.changeColor("yellow");
-            }else if(arreglo[i] == 'B'){
-                Up.changeColor("blue");
-            }else if(arreglo[i] == 'C'){
-                Up.changeColor("orange");
-            }else if(arreglo[i] == 'D'){
-                Up.changeColor("black");
-            }else if (arreglo[i] == '0'){
-                Up.changeColor("red");
+            if (i == 0){
+                identificador(arreglo[i], Up);
+            }else if (i == 3){
+                identificador(arreglo[i], Rigth);
+            }else if (i == 6){
+                identificador(arreglo[i], Down);
             }else{
-                Exception e;
+                identificador(arreglo[i], Left);
             }
+        }
+    }
+    private void identificador(char s, Rectangle p){
+        if (s == 'A'){
+            p.changeColor("yellow");
+        }else if(s == 'B'){
+            p.changeColor("blue");
+        }else if(s == 'C'){
+            p.changeColor("magenta");
+        }else if(s == 'D'){
+            p.changeColor("green");
+        }else if (s == '0'){
+            p.changeColor("red");
+        }else{
+            Exception e;
         }
     }
     public void makeVisible(){
@@ -63,6 +85,10 @@ public class Molecule{
     }
     public void makeInvisible(){
         Back.makeInvisible();
+        Up.makeInvisible();
+        Down.makeInvisible();
+        Rigth.makeInvisible();
+        Left.makeInvisible();
         isVisible = false;
     }
 }

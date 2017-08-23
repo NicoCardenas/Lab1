@@ -2,8 +2,10 @@
 comment0.params=datos
 comment0.target=Molecule(java.lang.String)
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Molecule\r\n
-comment1.params=
-comment1.target=void\ makeVisible()
+comment1.params=s\ p
+comment1.target=void\ identificador(char,\ Rectangle)
 comment2.params=
-comment2.target=void\ makeInvisible()
-numComments=3
+comment2.target=void\ makeVisible()
+comment3.params=
+comment3.target=void\ makeInvisible()
+numComments=4
