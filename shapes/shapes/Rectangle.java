@@ -158,7 +158,7 @@ public class Rectangle{
     public void changeColor(String newColor){
         color = newColor;
         draw();
-    }
+    }          
 
     /*
      * Draw the rectangle with current specifications on screen.
