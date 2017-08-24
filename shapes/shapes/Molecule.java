@@ -29,7 +29,7 @@ public class Molecule{
      * Constructor del Objeto Molecula
      */
     public Molecule(String datos){
-        // Instanciacion de la variables
+        // Instanciacion de variables
         up = new Rectangle();
         rigth = new Rectangle();
         left = new Rectangle();
@@ -215,28 +215,28 @@ public class Molecule{
      * Mover la molecula hacia abajo
      */
     public void moveDown(){
-        back.moveDown();
-        up.moveDown();
-        down.moveDown();
-        rigth.moveDown();
-        left.moveDown();
-        upsign.moveDown();
-        rigthsign.moveDown();
-        leftsign.moveDown();
-        downsign.moveDown();
+        back.moveVertical(90);
+        up.moveVertical(90);
+        down.moveVertical(90);
+        rigth.moveVertical(90);
+        left.moveVertical(90);
+        upsign.moveVertical(90);
+        rigthsign.moveVertical(90);
+        leftsign.moveVertical(90);
+        downsign.moveVertical(90);
     }
     /**
      * Mover la molecula hacia la derecha
      */
     public void moveRight(){
-        back.moveRight();
-        up.moveRight();
-        down.moveRight();
-        rigth.moveRight();
-        left.moveRight();
-        upsign.moveRight();
-        rigthsign.moveRight();
-        leftsign.moveRight();
-        downsign.moveRight();
+        back.moveHorizontal(90);
+        up.moveHorizontal(90);
+        down.moveHorizontal(90);
+        rigth.moveHorizontal(90);
+        left.moveHorizontal(90);
+        upsign.moveHorizontal(90);
+        rigthsign.moveHorizontal(90);
+        leftsign.moveHorizontal(90);
+        downsign.moveHorizontal(90);
     }
 }

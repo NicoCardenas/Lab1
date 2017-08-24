@@ -203,19 +203,19 @@ public class Rectangle{
     public void rainbow(){
         ColorOrigin = color;
         changeColor("red");
-        Wait(100);
+        Wait(200);
         changeColor("orange");
-        Wait(100);
+        Wait(200);
         changeColor("yellow");
-        Wait(100);
+        Wait(200);
         changeColor("green");
-        Wait(100);
+        Wait(200);
+        changeColor("cyan");
+        Wait(200);
         changeColor("blue");
-        Wait(100);
-        changeColor("purple");
-        Wait(100);
+        Wait(200);
         changeColor("magenta");
-        Wait(100);
+        Wait(200);
         changeColor(ColorOrigin);
     }
     /**
