@@ -4,8 +4,8 @@ import java.awt.geom.*;
 /**
  * A circle that can be manipulated and that draws itself on a canvas.
  * 
- * @author  Michael Kolling and David J. Barnes
- * @version 1.0.  (15 July 2000) 
+ * @author  Paola Cuellar y Nicolás Cárdenas
+ * @version 2.0  (24 August 2017) 
  */
 
 public class Circle{
@@ -25,6 +25,17 @@ public class Circle{
         diameter = 30;
         xPosition = 20;
         yPosition = 15;
+        color = "blue";
+        isVisible = false;
+    }
+    
+    /**
+     * Crea un nuevo circulo con las posiciones y el tamaño indicado
+     */
+    public Circle(int xPosition, int yPosition, int size){
+        diameter = size;
+        this.xPosition = xPosition;
+        this.yPosition = yPosition;
         color = "blue";
         isVisible = false;
     }

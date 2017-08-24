@@ -4,7 +4,7 @@ import java.awt.*;
  * A rectangle that can be manipulated and that draws itself on a canvas.
  * 
  * @author  Paola Cuellar y Nicolás Cárdenas
- * @version 2.0  (22 August 2017)
+ * @version 3.0  (24 August 2017)
  */
 
 
@@ -28,6 +28,19 @@ public class Rectangle{
         width = 40;
         xPosition = 70;
         yPosition = 15;
+        color = "magenta";
+        isVisible = false;
+        perimetro();
+    }
+    
+    /**
+     * Crear un cuadrado en las posiciones y el tamaño indicado
+     */
+    public Rectangle(int xPosition, int yPosition, int size){
+        height = size;
+        width = size;
+        this.xPosition = xPosition;
+        this.yPosition = yPosition;
         color = "magenta";
         isVisible = false;
         perimetro();
