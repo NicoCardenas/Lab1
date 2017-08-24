@@ -26,7 +26,7 @@ public class Canvas{
      */
     public static Canvas getCanvas(){
         if(canvasSingleton == null) {
-            canvasSingleton = new Canvas("MOLECULES", 700, 700, 
+            canvasSingleton = new Canvas("MOLECULES", 800, 800, 
                                          Color.white);
         }
         canvasSingleton.setVisible(true);

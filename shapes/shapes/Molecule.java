@@ -14,6 +14,7 @@ public class Molecule{
     private Rectangle left;
     private Rectangle down;
     private Rectangle rigth;
+    private Rectangle[] atomos;
     private String cadena;
     private boolean isVisible;
     private char[] arreglo;
@@ -30,6 +31,7 @@ public class Molecule{
      */
     public Molecule(String datos){
         // Instanciacion de variables
+        atomos=new Rectangle[4];
         up = new Rectangle();
         rigth = new Rectangle();
         left = new Rectangle();
@@ -181,6 +183,7 @@ public class Molecule{
      */
     public void rotate(){
         // Rotacion en bloque de los cuadrados
+        
         up.moveHorizontal(30);
         up.moveVertical(30);
         rigth.moveHorizontal(-30);
