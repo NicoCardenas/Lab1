@@ -90,6 +90,9 @@ public class SelfAssembly{
      */
     public void value(){
         int i = 0;
+        if (tablero.size() == 0){
+            posicionamiento(lista.get(i), 0);
+        }
         while (comp.isEmpty()){
             comp = lista.get(i).esCompatible(tablero.get(tablero.size()-1));
             i++;
@@ -97,7 +100,7 @@ public class SelfAssembly{
         for (int j = 0; j < comp.size(); j++){
             if (comp.get(j) != 0){
                 if (comp.get(j) == 1 && comp.get(j+1) == 1){
-                    lista.get(i).reflect();
+                    lista.get(i-1).reflect();
                     posicionamiento(tablero.get(tablero.size()-1), tablero.size()-1);
                 }else if (comp.get(j) == 1 && comp.get(j+1) == 3){
                     posicionamiento(tablero.get(tablero.size()-1), tablero.size()-1);
