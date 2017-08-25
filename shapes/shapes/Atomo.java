@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class Atomo here.
+ * La clase Atomo Recibe una cadena y la simboliza en colores y formas
  * 
  * @author  Paola Cuellar y Nicolás Cárdenas
  * @version 1.0  (24 August 2017)
@@ -14,7 +14,7 @@ public class Atomo
     private boolean isVisible;
 
     /**
-     * Constructor for objects of class Atomo
+     * Constructor del objeto de la clase Atomo
      */
     public Atomo(String cadena)
     {
@@ -51,11 +51,11 @@ public class Atomo
         }else if(s == 'B'){
             color = "blue";
         }else if(s == 'C'){
-            color = "magenta";
+            color = "red";
         }else if(s == 'D'){
             color = "green";
         }else if (s == '0'){
-            color = "red";
+            color = "gray";
         }else{
             color = "black";
         }
@@ -72,7 +72,7 @@ public class Atomo
         }else if(s == '-'){
             color = "black";
         }else{
-            color = "red";
+            color = "gray";
         }
         return color;
     }

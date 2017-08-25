@@ -20,6 +20,7 @@ public class Molecule{
     
     /**
      * Constructor del Objeto Molecula
+     * @param String datos entra una cadena
      */
     public Molecule(String datos){
         atomos = new Atomo[5];
@@ -33,7 +34,7 @@ public class Molecule{
     }
     
     /**
-     * 
+     * Hace Visible las moleculas
      */
     public void makeVisible(){
         if(!isVisible){
@@ -46,7 +47,7 @@ public class Molecule{
     }
     
     /**
-     * 
+     * Hace invisible las moleculas
      */
     public void makeInvisible(){
         if(isVisible){
@@ -59,14 +60,14 @@ public class Molecule{
     }
     
     /**
-     * 
+     * Retorna el tipo de molecula
      */
     public String getType(){
-        return "<Molecule>";
+        return "Molecule";
     }
     
     /**
-     * 
+     * Mueve la molecula hacia abajo
      */
     public void moveDown(){
          int cambio = 0;
@@ -129,14 +130,14 @@ public class Molecule{
     }
     
     /**
-     * 
+     * Retorna lista de los atomos
      */
     private Atomo[] getAtomos(){
         return atomos;
     }
     
     /**
-     * 
+     * Retorna en que atomos son compatibles las dos moleculas
      */
     public ArrayList<Integer> esCompatible(Molecule m){
         Atomo[] tmp = m.getAtomos();
@@ -151,5 +152,12 @@ public class Molecule{
         }
         return posiciones;
     }
-    
+    /**
+     * Cambia el fonde de la molecula
+     */
+    public void enUso(){
+        makeInvisible();
+        back.changeColor("cyan");
+        makeVisible();
+    }
 }
